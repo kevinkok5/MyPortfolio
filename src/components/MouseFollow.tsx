@@ -98,7 +98,9 @@ const MouseFollow = () => {
         };
     }, []);
 
-    return <div ref={mouseFollowRef} className="mouse-follow"></div>;
+    return (
+        <div ref={mouseFollowRef} className="mouse-follow max-sm:hidden"></div>
+    );
 };
 
 export default MouseFollow;

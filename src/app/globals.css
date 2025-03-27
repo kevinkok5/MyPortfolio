@@ -156,6 +156,8 @@
 
     .infinite-scroll::before,
     .infinite-scroll::after {
+        @apply max-md:!w-4 max-lg:w-10;
+
         content: "";
         position: absolute;
         width: 120px;
@@ -171,6 +173,16 @@
     .infinite-scroll::after {
         right: 0;
         box-shadow: -50px 10px 70px 40px #1d1d1f;
+    }
+    @media screen and (max-width: 800px) {
+        .infinite-scroll::before {
+            left: 20;
+            box-shadow: 15px 0px 40px 40px #1d1d1f;
+        }
+        .infinite-scroll::after {
+            right: 0;
+            box-shadow: -15px 0px 40px 40px #1d1d1f;
+        }
     }
 
     @keyframes scroll {
